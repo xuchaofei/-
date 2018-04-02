@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Czj-Pu-vZy">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fFn-Yu-E43">
+            <objects>
+                <navigationController id="Czj-Pu-vZy" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6SQ-wR-KKQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="n97-mK-UDu" kind="relationship" relationship="rootViewController" id="RDi-Ar-CPh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qDR-HR-YlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-949" y="128"/>
+        </scene>
+        <!--网易新闻-->
+        <scene sceneID="iC4-YU-7aZ">
+            <objects>
+                <viewController id="n97-mK-UDu" customClass="NewsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3YO-Xe-t28"/>
+                        <viewControllerLayoutGuide type="bottom" id="AO2-h9-i0i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EH9-iu-MVp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCv-L7-gTU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Ic7-FE-C0A"/>
+                                </constraints>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hqq-gC-ezU">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Hqq-gC-ezU" secondAttribute="trailing" id="U61-mY-IkE"/>
+                            <constraint firstItem="Hqq-gC-ezU" firstAttribute="leading" secondItem="EH9-iu-MVp" secondAttribute="leading" id="aG7-y9-4CU"/>
+                            <constraint firstItem="AO2-h9-i0i" firstAttribute="top" secondItem="Hqq-gC-ezU" secondAttribute="bottom" id="dJS-tq-WeM"/>
+                            <constraint firstItem="MCv-L7-gTU" firstAttribute="leading" secondItem="EH9-iu-MVp" secondAttribute="leading" id="fXr-1P-iGj"/>
+                            <constraint firstItem="MCv-L7-gTU" firstAttribute="top" secondItem="3YO-Xe-t28" secondAttribute="bottom" id="iTI-cn-KDU"/>
+                            <constraint firstItem="Hqq-gC-ezU" firstAttribute="top" secondItem="MCv-L7-gTU" secondAttribute="bottom" id="rFg-HN-ZW8"/>
+                            <constraint firstAttribute="trailing" secondItem="MCv-L7-gTU" secondAttribute="trailing" id="yxN-kJ-RHH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="网易新闻" id="aIM-ZX-jA6"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="contentView" destination="Hqq-gC-ezU" id="3f4-Vc-zjr"/>
+                        <outlet property="titileScrollView" destination="MCv-L7-gTU" id="oRe-jV-g1U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZv-wh-Yvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-444.5" y="114.5"/>
+        </scene>
+    </scenes>
+</document>
